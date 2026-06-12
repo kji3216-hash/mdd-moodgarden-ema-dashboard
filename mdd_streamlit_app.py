@@ -52,6 +52,25 @@ ENABLE_LOCAL_LIVE_SYNC = os.getenv("ENABLE_LOCAL_LIVE_SYNC", "0") == "1"
 
 EMA_CARD_CSS = """
 <style>
+.mode-banner {
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin: 4px 0 12px 0;
+    border: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+.mode-banner.public {
+    background: rgba(46, 213, 115, 0.10);
+    border-left: 4px solid #2ED573;
+}
+.mode-banner.local {
+    background: rgba(112, 161, 255, 0.12);
+    border-left: 4px solid #70A1FF;
+}
+.mode-banner strong {
+    color: #fff;
+}
 .ema-card {
     background: rgba(28, 31, 54, 0.92);
     border: 1px solid rgba(255, 255, 255, 0.10);
@@ -101,6 +120,26 @@ EMA_CARD_CSS = """
 }
 </style>
 """
+
+
+def render_mode_banner():
+    if ENABLE_LOCAL_LIVE_SYNC:
+        label = "Local Live Sync"
+        detail = "이 실행은 로컬 MoodGarden live JSON 파일을 읽을 수 있는 개발/개인용 모드입니다."
+        klass = "local"
+    else:
+        label = "Public Demo"
+        detail = "이 실행은 외부 공개용 모드입니다. 개인 파일 동기화 없이 MoodGarden CSV 업로드만 사용합니다."
+        klass = "public"
+    st.markdown(
+        f"""
+        <div class="mode-banner {klass}">
+          <strong>{label}</strong><br>
+          {detail}
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # ==================== 슬라이더 기본값 & 리셋 ====================
 
@@ -761,6 +800,8 @@ def plot_symptom_radar(symptom_predictions):
 
 def main():
     st.title("🧠 주요 우울장애(MDD) 유전-뇌-행동 삼각구조")
+    st.markdown(EMA_CARD_CSS, unsafe_allow_html=True)
+    render_mode_banner()
     st.markdown(WARNING_TEXT)
 
     # ---------- 사이드바 ----------
@@ -774,6 +815,10 @@ def main():
     st.sidebar.button("🔄 기본값으로 리셋", on_click=reset_all)
 
     st.sidebar.subheader("🌱 MoodGarden EMA")
+    if ENABLE_LOCAL_LIVE_SYNC:
+        st.sidebar.info("실행 모드: Local Live Sync")
+    else:
+        st.sidebar.success("실행 모드: Public Demo")
     ema_file = st.sidebar.file_uploader(
         "MoodGarden CSV 업로드",
         type=["csv"],
