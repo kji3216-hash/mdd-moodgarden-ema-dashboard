@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.venv_mdd/
+*.log
+moodgarden_live.json
+moodgarden_*.csv
+outputs.zip

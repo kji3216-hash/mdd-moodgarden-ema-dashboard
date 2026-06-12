@@ -1,0 +1,431 @@
+{
+  "project_overview": {
+    "title": "주요 우울장애(MDD) 유전-뇌-행동 삼각구조 시각화",
+    "description": "MDD의 유전적 취약성, 뇌 네트워크 이상, 행동/증상을 삼각 피드백 구조로 매핑한 지식 구조",
+    "created_date": "2026-06-12",
+    "theoretical_framework": "Yuan et al. (2026) Neuron - Pathological Attractor Model; Menon (2011) Triple Network Model",
+    "data_source": "PGC 2025 Cell, Zhang 2026 Psychol Med ALE, Zhao 2024 Psychol Med, literature_validation_report.md"
+  },
+  "symptom_clusters": {
+    "emotional": {
+      "symptoms": ["depressed_mood", "emptiness", "irritability", "crying"],
+      "description": "정서 증상: 지속적 우울감, 공허감, 짜증",
+      "circuits": ["dmn_overactivity", "sgacc_hyperactivity", "amygdala_hypersensitivity"],
+      "key_mechanisms": ["dmn_rumination_loop", "negative_emotional_amplification", "self_referential_negativity"],
+      "measurement": "PHQ-9, HAMD-17, MADRS"
+    },
+    "anhedonia": {
+      "symptoms": ["loss_of_interest", "reduced_pleasure", "social_withdrawal"],
+      "description": "무쾌감: 이전에 즐겼던 활동에서의 흥미/즐거움 상실",
+      "circuits": ["reward_circuit_dysfunction"],
+      "key_mechanisms": ["reward_anticipation_deficit", "aberrant_striatal_processing", "motivation_loss"],
+      "measurement": "SHAPS, TEPS, Experience Sampling"
+    },
+    "cognitive": {
+      "symptoms": ["concentration_deficit", "indecision", "brain_fog", "memory_complaints"],
+      "description": "인지 증상: 집중력 저하, 우유부단, 뇌 안개",
+      "circuits": ["pfc_dysregulation", "hippocampus_atrophy", "salience_network_dysfunction"],
+      "key_mechanisms": ["compensatory_hyperactivation", "executive_dysfunction", "context_processing_deficit"],
+      "measurement": "Digit Span, TMT, Stroop Test"
+    },
+    "rumination": {
+      "symptoms": ["repetitive_negative_thoughts", "brooding", "self_criticism"],
+      "description": "반추: 반복적 부정적 사고, 자기비하적 반성",
+      "circuits": ["dmn_overactivity", "pfc_dysregulation"],
+      "key_mechanisms": ["dmn_dlpfc_imbalance", "sn_switching_failure", "self_referential_loop"],
+      "measurement": "RRS (Ruminative Response Scale)"
+    },
+    "somatic": {
+      "symptoms": ["sleep_disturbance", "appetite_change", "fatigue", "psychomotor_change"],
+      "description": "생체/신체 증상: 수면장애, 식욕변화, 피로, 정신운동 변화",
+      "circuits": ["hpa_axis_dysregulation"],
+      "key_mechanisms": ["cortisol_dysregulation", "inflammation_elevation", "circadian_disruption"],
+      "measurement": "PSQI, Actigraphy, BMI tracking"
+    },
+    "social": {
+      "symptoms": ["social_withdrawal", "interpersonal_difficulty", "negative_bias"],
+      "description": "사회적 증상: 사회적 위축, 대인관계 어려움, 타인 의도 부정적 해석",
+      "circuits": ["dmn_overactivity", "amygdala_hypersensitivity"],
+      "key_mechanisms": ["mentalizing_deficit", "threat_hyperdetection", "social_reward_blunting"],
+      "measurement": "WHODAS, SAS-SR"
+    }
+  },
+  "genetic_factors": {
+    "BDNF_Val66Met": {
+      "gene": "BDNF (Brain-Derived Neurotrophic Factor)",
+      "variant": "Val66Met (rs6265)",
+      "risk_allele": "Met",
+      "mechanism": "BDNF 분비 20-30% 감소 → 신경가소성 저하 → 해마 신경발생 감소",
+      "evidence_level": "strong",
+      "effect_on_circuits": {
+        "hippocampus_atrophy": {"weight": 0.40, "direction": "increase", "evidence": "2024 AIMS Neuroscience meta-analysis"},
+        "pfc_dysregulation": {"weight": 0.25, "direction": "increase", "evidence": "2023 Neuroscience & Biobehavioral Reviews"}
+      },
+      "behavioral_effects": ["memory_impairment", "treatment_resistance", "cognitive_symptoms"],
+      "key_references": ["Egan et al. 2003 Cell", "Verhagen et al. 2010 Mol Psychiatry meta-analysis"]
+    },
+    "FKBP5_rs1360780": {
+      "gene": "FKBP5 (FK506 Binding Protein 5)",
+      "variant": "rs1360780",
+      "risk_allele": "T",
+      "mechanism": "GR 감수성 저하 → 코르티솔 음성피드백 약화 → HPA 축 과활성",
+      "evidence_level": "strong",
+      "gxe_interaction": "아동기 외상 × T allele → MDD 위험 3-5배 증가",
+      "effect_on_circuits": {
+        "hpa_axis_dysregulation": {"weight": 0.50, "direction": "increase", "evidence": "2023 Frontiers Psychiatry"},
+        "hippocampus_atrophy": {"weight": 0.35, "direction": "increase", "evidence": "cortisol neurotoxicity pathway"},
+        "amygdala_hypersensitivity": {"weight": 0.30, "direction": "increase", "evidence": "hyperarousal maintenance"}
+      },
+      "behavioral_effects": ["stress_sensitivity", "sleep_disturbance", "chronification_tendency"],
+      "key_references": ["Binder 2009 Mol Psychiatry", "Klengel et al. 2013 Nature Neuroscience"]
+    },
+    "HTTLPR_SLC6A4": {
+      "gene": "SLC6A4 (Serotonin Transporter)",
+      "variant": "5-HTTLPR promoter polymorphism",
+      "risk_allele": "S (short)",
+      "mechanism": "세로토닌 재흡수 운반체 발현 감소 → 편도체 과민",
+      "evidence_level": "controversial",
+      "controversy_note": "G×E 상호작용은 대규모 메타분석(Border 2019, Am J Psychiatry)에서 재현 실패. 2025 MDPI 메타분석에서 재확인. 유전-뇌(amygdala FC) 효과는 비교적 견고.",
+      "effect_on_circuits": {
+        "amygdala_hypersensitivity": {"weight": 0.30, "direction": "increase", "evidence": "multiple fMRI studies"},
+        "pfc_dysregulation": {"weight": 0.15, "direction": "increase", "evidence": "vmPFC-amygdala connectivity"}
+      },
+      "behavioral_effects": ["negative_emotional_bias", "stress_vulnerability"],
+      "key_references": ["Caspi et al. 2003 Science", "Border et al. 2019 Am J Psychiatry", "2025 MDPI IJMS meta-analysis"]
+    },
+    "NR3C1": {
+      "gene": "NR3C1 (Glucocorticoid Receptor Gene)",
+      "variant": "multiple SNPs (e.g., rs6198, BclI)",
+      "risk_allele": "variant-dependent",
+      "mechanism": "GR 기능 저하 → 코르티솔 음성피드백 약화 → HPA 축 항진",
+      "evidence_level": "moderate",
+      "gxe_interaction": "아동기 학대 × NR3C1 변이 → GR 감수성 변화",
+      "effect_on_circuits": {
+        "hpa_axis_dysregulation": {"weight": 0.35, "direction": "increase", "evidence": "2020 Acta Neuropsychiatrica systematic review"}
+      },
+      "behavioral_effects": ["stress_dysregulation", "early_life_stress_sensitivity"],
+      "key_references": ["2020 Acta Neuropsychiatrica systematic review"]
+    },
+    "PRS": {
+      "gene": "Polygenic Risk Score (genome-wide)",
+      "variant": "697 independent associations at 636 loci (PGC 2025)",
+      "mechanism": "다유전자 누적 위험 → 전반적 신경발달/기능 조절",
+      "evidence_level": "strong",
+      "effect_on_circuits": {
+        "dmn_overactivity": {"weight": 0.20, "direction": "increase", "evidence": "2025 PMC PRS-sgACC FC study"},
+        "sgacc_hyperactivity": {"weight": 0.20, "direction": "increase", "evidence": "2025 PMC PRS-sgACC FC study"},
+        "reward_circuit_dysfunction": {"weight": 0.15, "direction": "increase", "evidence": "2025 Mol Psychiatry systematic review"}
+      },
+      "behavioral_effects": ["general_vulnerability", "earlier_onset", "treatment_resistance"],
+      "key_references": ["PGC MDD 2025 Cell (685,808 cases × 4,364,225 controls)"]
+    }
+  },
+  "brain_networks": {
+    "dmn_overactivity": {
+      "name": "Default Mode Network 과활성",
+      "regions": ["mPFC", "PCC", "inferior_temporal", "sgACC"],
+      "coordinates": {"mPFC": {"x": 0, "y": 52, "z": -2}, "PCC": {"x": 0, "y": -52, "z": 28}, "inf_temporal": {"x": -55, "y": -20, "z": -28}},
+      "normal_function": "자기성찰, 과거 회상, 마음이 흐를 때 활성화",
+      "mdd_distortion": "과활성 → 반추(rumination) 지속 → 자기비하적 사고 고착",
+      "clinical_implication": "반추, 우울감, 자기비하, 과거 부정 기억 재경험",
+      "evidence": "★★★★★ (2024 Nature Mental Health, 2025 BJPsych Open, 2026 Nature Mental Health)",
+      "treatment_targets": ["SSRI (DMN↓)", "rTMS (DLPFC→DMN 억제)", "CBT (반추 인지 재구성)", "Mindfulness (DMN 활동 감소)"]
+    },
+    "salience_network_dysfunction": {
+      "name": "Salience Network 조절장애",
+      "regions": ["anterior_insula", "dACC"],
+      "coordinates": {"ant_insula": {"x": -35, "y": 20, "z": -5}, "dACC": {"x": 0, "y": 20, "z": 30}},
+      "normal_function": "DMN↔CEN 전환 스위치 — 중요한 자극 감지, 네트워크 전환",
+      "mdd_distortion": "DMN 쪽으로 편향 → CEN으로 전환 실패 → 반추에 갇힘",
+      "clinical_implication": "반추 지속, 인지통제 불가, 중요한 것에 주의 전환 어려움",
+      "evidence": "★★★★☆ (Menon 2011, 2024 eLife, 2025 Front Neurosci)",
+      "treatment_targets": ["rTMS (DLPFC)", "Ketamine (SN 재설정)"]
+    },
+    "sgacc_hyperactivity": {
+      "name": "Subgenual ACC (BA25) 과활성",
+      "regions": ["sgACC", "vmPFC"],
+      "coordinates": {"sgACC": {"x": 0, "y": 15, "z": -15}, "vmPFC": {"x": 0, "y": 40, "z": -15}},
+      "normal_function": "정서-자율신경계 연결, 슬픔 반응 조절",
+      "mdd_distortion": "과활성 → DMN-변연계 과연결 → 우울 상태 고착 (pathological attractor 핵심 노드)",
+      "clinical_implication": "치료저항성 우울증, 자살사고, 약물 반응 예측",
+      "evidence": "★★★★★ (Mayberg 2005 DBS, 2025 PMC PRS-sgACC, 2026 Neuron Yuan)",
+      "treatment_targets": ["DBS (sgACC 직접 자극)", "rTMS (fMRI-유도 코일 최적화)", "Ketamine (sgACC 활성 정상화)"]
+    },
+    "reward_circuit_dysfunction": {
+      "name": "보상 회로 이상",
+      "regions": ["NAc", "ventral_striatum", "VTA", "vmPFC"],
+      "coordinates": {"NAc": {"x": 10, "y": 12, "z": -8}, "VS": {"x": -10, "y": 12, "z": -8}, "VTA": {"x": 0, "y": -16, "z": -12}},
+      "normal_function": "보상 예측, 학습, 동기 부여",
+      "mdd_distortion": "복합적 이상: 기대(anticipation)↓, 학습(learning) 시 선조체 과활성, 소비(consumption) 혼재",
+      "clinical_implication": "무쾌감(anhedonia), 의욕 저하, 사회적 보상 둔감",
+      "evidence": "★★★★☆ (Zhao 2024 Psychol Med, Zhang 2026 Psychol Med ALE)",
+      "treatment_targets": ["Ketamine (보상 회로 급속 활성화)", "Exercise (자연적 보상 노출 → RPE 정상화)", "Behavioral Activation"]
+    },
+    "amygdala_hypersensitivity": {
+      "name": "편도체 과민",
+      "regions": ["amygdala", "insula"],
+      "coordinates": {"amygdala": {"x": -22, "y": -5, "z": -18}, "insula": {"x": -35, "y": 5, "z": 5}},
+      "normal_function": "위협 감지, 정서 반응, 부정 자극 처리",
+      "mdd_distortion": "부정 자극에 과민 반응 → vmPFC 억제 실패 → 부정 정서 편향",
+      "clinical_implication": "부정 정서 편향, 불안 동반, 자극 과민",
+      "evidence": "★★★★★ (2025 Front Psychiatry bibliometric, 2025 Mol Psychiatry)",
+      "treatment_targets": ["SSRI (편도체 반응성↓)", "CBT (인지적 재평가→편도체↓)", "rTMS"]
+    },
+    "pfc_dysregulation": {
+      "name": "전두엽(PFC) 조절 이상",
+      "regions": ["DLPFC", "vlPFC", "ACC"],
+      "coordinates": {"DLPFC": {"x": -40, "y": 35, "z": 25}, "vlPFC": {"x": -45, "y": 25, "z": -5}, "ACC": {"x": 0, "y": 35, "z": 25}},
+      "normal_function": "인지통제, 정서조절, 계획, 의사결정",
+      "mdd_distortion": "과제 의존적: 인지 과제 시 보상적 과활성, 정서 조절 시 저활성 → 위계적 조절 실패",
+      "clinical_implication": "인지 저하, 정서 조절 실패, 우유부단, 집행기능 장애",
+      "evidence": "★★★★☆ (Zhang 2026 Psychol Med ALE, Yuan 2026 Neuron)",
+      "treatment_targets": ["rTMS (DLPFC 직접 자극 — 1차 타겟)", "CBT (인지 재구성→DLPFC↑)", "Working Memory Training"]
+    },
+    "hippocampus_atrophy": {
+      "name": "해마 위축",
+      "regions": ["hippocampus", "parahippocampus"],
+      "coordinates": {"hippocampus": {"x": -25, "y": -20, "z": -15}, "parahippocampus": {"x": -28, "y": -30, "z": -15}},
+      "normal_function": "기억 형성, 맥락 처리, 정서 조절, HPA 축 피드백",
+      "mdd_distortion": "체적 5-11% 감소 → 기억 장애, 맥락 처리 이상, HPA 피드백 악화",
+      "clinical_implication": "기억력 저하, 부정적 기억 편향, 맥락 파악 어려움",
+      "evidence": "★★★★★ (2024 Sci Rep, 2025 BMC Psychiatry, 2026 JAD)",
+      "treatment_targets": ["SSRI (BDNF↑→해마 신경발생↑)", "Exercise (BDNF↑→해마↑)", "ECT (해마 체적 증가 확인)"]
+    },
+    "hpa_axis_dysregulation": {
+      "name": "HPA 축/염증 이상",
+      "regions": ["hypothalamus", "pituitary", "adrenal", "whole_brain_diffuse"],
+      "coordinates": {"hypothalamus": {"x": 0, "y": -5, "z": -5}, "pituitary": {"x": 0, "y": -5, "z": -25}},
+      "normal_function": "스트레스 반응, 코르티솔 조절, 면역 조절",
+      "mdd_distortion": "코르티솔 항진, 음성피드백 둔화, 염증 마커(CRP, IL-6) 상승",
+      "clinical_implication": "수면장애(조기각성), 식욕변화, 피로, 만성화",
+      "evidence": "★★★★☆ (2024 Pharmacol Rep, 2024 PMC scoping review, 2026 Cell inflammation)",
+      "treatment_targets": ["Sleep hygiene (HPA↓)", "Exercise (cortisol↓, BDNF↑)", "Anti-inflammatory agents (연구 중)"]
+    }
+  },
+  "simulation_model": {
+    "variables": {
+      "bdnf_expression": {"description": "BDNF Met 발현 수준 (→ 신경가소성 저하)", "unit": "percentile", "default": 30},
+      "fkbp5_expression": {"description": "FKBP5 위험 대립유전자 발현 (→ HPA 축 항진)", "unit": "percentile", "default": 30},
+      "crhr1_sensitivity": {"description": "CRHR1 민감도 (→ CRH 신호 과민)", "unit": "percentile", "default": 30},
+      "serotonin_transporter": {"description": "5-HTTLPR S 효과 (→ 편도체 과민) ⚠️ 논란", "unit": "percentile", "default": 30},
+      "nr3c1_dysfunction": {"description": "NR3C1 기능 저하 (→ GR 감수성↓)", "unit": "percentile", "default": 25},
+      "dmn_overactivity": {"description": "DMN 과활성도 (반추)", "unit": "percentile", "default": 40},
+      "salience_dysfunction": {"description": "살리언스 네트워크 조절 장애", "unit": "percentile", "default": 35},
+      "sgacc_hyperactivity": {"description": "sgACC 과활성도", "unit": "percentile", "default": 35},
+      "reward_hypofunction": {"description": "보상 회로 저기능 (무쾌감)", "unit": "percentile", "default": 35},
+      "amygdala_sensitivity": {"description": "편도체 감도 (부정정서)", "unit": "percentile", "default": 40},
+      "prefrontal_control": {"description": "전두엽 조절 기능", "unit": "percentile", "default": 50},
+      "hippocampal_volume": {"description": "해마 체적 상태 (↑=건강, ↓=위축)", "unit": "percentile", "default": 60},
+      "cortisol_level": {"description": "코르티솔 수준", "unit": "percentile", "default": 35},
+      "inflammation_level": {"description": "염증 수준 (CRP, IL-6)", "unit": "percentile", "default": 25},
+      "antidepressant_response": {"description": "항우울제 반응도", "unit": "percentile", "default": 0}
+    },
+    "circuit_distortion_functions": {
+      "dmn_overactivity": {
+        "base_activity": 0.3,
+        "phase_transition_threshold": 0.55,
+        "phase_transition_steepness": 8.0,
+        "distortion_factors": {
+          "bdnf_expression": {"weight": 0.10, "direction": "increase"},
+          "serotonin_transporter": {"weight": 0.15, "direction": "increase"},
+          "salience_dysfunction": {"weight": 0.20, "direction": "increase"},
+          "antidepressant_response": {"weight": 0.25, "direction": "normalize"}
+        }
+      },
+      "salience_network_dysfunction": {
+        "base_activity": 0.25,
+        "phase_transition_threshold": 0.50,
+        "phase_transition_steepness": 7.0,
+        "distortion_factors": {
+          "bdnf_expression": {"weight": 0.10, "direction": "increase"},
+          "fkbp5_expression": {"weight": 0.10, "direction": "increase"},
+          "dmn_overactivity": {"weight": 0.15, "direction": "increase"},
+          "antidepressant_response": {"weight": 0.20, "direction": "normalize"}
+        }
+      },
+      "sgacc_hyperactivity": {
+        "base_activity": 0.25,
+        "phase_transition_threshold": 0.50,
+        "phase_transition_steepness": 9.0,
+        "distortion_factors": {
+          "serotonin_transporter": {"weight": 0.15, "direction": "increase"},
+          "fkbp5_expression": {"weight": 0.15, "direction": "increase"},
+          "cortisol_level": {"weight": 0.15, "direction": "increase"},
+          "dmn_overactivity": {"weight": 0.10, "direction": "increase"},
+          "antidepressant_response": {"weight": 0.25, "direction": "normalize"}
+        }
+      },
+      "reward_circuit_dysfunction": {
+        "base_activity": 0.25,
+        "phase_transition_threshold": 0.45,
+        "phase_transition_steepness": 7.5,
+        "distortion_factors": {
+          "bdnf_expression": {"weight": 0.15, "direction": "increase"},
+          "serotonin_transporter": {"weight": 0.10, "direction": "increase"},
+          "cortisol_level": {"weight": 0.10, "direction": "increase"},
+          "inflammation_level": {"weight": 0.10, "direction": "increase"},
+          "antidepressant_response": {"weight": 0.20, "direction": "normalize"}
+        }
+      },
+      "amygdala_hypersensitivity": {
+        "base_activity": 0.3,
+        "phase_transition_threshold": 0.50,
+        "phase_transition_steepness": 8.0,
+        "distortion_factors": {
+          "serotonin_transporter": {"weight": 0.25, "direction": "increase"},
+          "fkbp5_expression": {"weight": 0.15, "direction": "increase"},
+          "cortisol_level": {"weight": 0.15, "direction": "increase"},
+          "prefrontal_control": {"weight": 0.20, "direction": "decrease"},
+          "antidepressant_response": {"weight": 0.20, "direction": "normalize"}
+        }
+      },
+      "pfc_dysregulation": {
+        "base_activity": 0.25,
+        "phase_transition_threshold": 0.50,
+        "phase_transition_steepness": 7.5,
+        "distortion_factors": {
+          "bdnf_expression": {"weight": 0.20, "direction": "increase"},
+          "cortisol_level": {"weight": 0.10, "direction": "increase"},
+          "hippocampal_volume": {"weight": 0.15, "direction": "decrease"},
+          "salience_dysfunction": {"weight": 0.10, "direction": "increase"},
+          "antidepressant_response": {"weight": 0.20, "direction": "normalize"}
+        }
+      },
+      "hippocampus_atrophy": {
+        "base_activity": 0.25,
+        "phase_transition_threshold": 0.50,
+        "phase_transition_steepness": 8.0,
+        "distortion_factors": {
+          "bdnf_expression": {"weight": 0.30, "direction": "increase"},
+          "cortisol_level": {"weight": 0.25, "direction": "increase"},
+          "inflammation_level": {"weight": 0.10, "direction": "increase"},
+          "hippocampal_volume": {"weight": 0.20, "direction": "decrease"},
+          "antidepressant_response": {"weight": 0.15, "direction": "normalize"}
+        }
+      },
+      "hpa_axis_dysregulation": {
+        "base_activity": 0.3,
+        "phase_transition_threshold": 0.45,
+        "phase_transition_steepness": 7.0,
+        "distortion_factors": {
+          "fkbp5_expression": {"weight": 0.25, "direction": "increase"},
+          "crhr1_sensitivity": {"weight": 0.15, "direction": "increase"},
+          "nr3c1_dysfunction": {"weight": 0.15, "direction": "increase"},
+          "cortisol_level": {"weight": 0.20, "direction": "increase"},
+          "inflammation_level": {"weight": 0.10, "direction": "increase"},
+          "antidepressant_response": {"weight": 0.15, "direction": "normalize"}
+        }
+      }
+    },
+    "symptom_mapping": {
+      "emotional_symptoms": {
+        "threshold_distortion": 0.55,
+        "primary_circuits": ["dmn_overactivity", "sgacc_hyperactivity", "amygdala_hypersensitivity"],
+        "prediction": "D_circuit > 0.55 → 지속적 우울감/공허감 발현"
+      },
+      "anhedonia_symptoms": {
+        "threshold_distortion": 0.45,
+        "primary_circuits": ["reward_circuit_dysfunction"],
+        "prediction": "D_circuit > 0.45 → 무쾌감/흥미상실"
+      },
+      "cognitive_symptoms": {
+        "threshold_distortion": 0.50,
+        "primary_circuits": ["pfc_dysregulation", "hippocampus_atrophy", "salience_network_dysfunction"],
+        "prediction": "D_circuit > 0.50 → 인지 저하/집중력 장애"
+      },
+      "rumination_symptoms": {
+        "threshold_distortion": 0.55,
+        "primary_circuits": ["dmn_overactivity", "salience_network_dysfunction"],
+        "prediction": "DMN > 0.55 & SN > 0.50 → 반추 지속"
+      },
+      "somatic_symptoms": {
+        "threshold_distortion": 0.45,
+        "primary_circuits": ["hpa_axis_dysregulation"],
+        "prediction": "D_circuit > 0.45 → 수면장애/식욕변화/피로"
+      },
+      "social_symptoms": {
+        "threshold_distortion": 0.50,
+        "primary_circuits": ["dmn_overactivity", "amygdala_hypersensitivity"],
+        "prediction": "D_circuit > 0.50 → 사회적 위축/부정적 해석 편향"
+      }
+    }
+  },
+  "brain_coordinates": {
+    "mPFC": {"x": 0, "y": 52, "z": 40, "color": "#FF6B6B", "layer": "gene", "label": "mPFC"},
+    "PCC": {"x": 0, "y": -52, "z": 40, "color": "#FF8E72", "layer": "gene", "label": "PCC"},
+    "sgACC": {"x": 0, "y": 15, "z": 0, "color": "#FF4757", "layer": "brain", "label": "sgACC (BA25)"},
+    "ant_insula": {"x": -35, "y": 20, "z": 0, "color": "#FFA502", "layer": "brain", "label": "Ant. Insula"},
+    "dACC": {"x": 0, "y": 20, "z": 0, "color": "#FF6348", "layer": "brain", "label": "dACC"},
+    "DLPFC": {"x": -40, "y": 35, "z": 0, "color": "#1E90FF", "layer": "brain", "label": "DLPFC"},
+    "vlPFC": {"x": -45, "y": 25, "z": 0, "color": "#3742FA", "layer": "brain", "label": "vlPFC"},
+    "amygdala": {"x": -22, "y": -5, "z": -40, "color": "#FF4444", "layer": "behavior", "label": "Amygdala"},
+    "NAc": {"x": 10, "y": 12, "z": -40, "color": "#FFD700", "layer": "behavior", "label": "NAc (보상)"},
+    "hippocampus": {"x": -25, "y": -20, "z": -40, "color": "#A29BFE", "layer": "behavior", "label": "Hippocampus"},
+    "hypothalamus": {"x": 0, "y": -5, "z": -40, "color": "#FD79A8", "layer": "behavior", "label": "Hypothalamus"},
+    "VTA": {"x": 0, "y": -16, "z": -40, "color": "#E17055", "layer": "behavior", "label": "VTA"}
+  },
+  "triangle_connections": {
+    "gene_to_brain": [
+      {"source": "mPFC", "target": "sgACC", "type": "genetic_vulnerability", "weight": 0.3},
+      {"source": "PCC", "target": "DLPFC", "type": "genetic_vulnerability", "weight": 0.2}
+    ],
+    "brain_to_brain": [
+      {"source": "sgACC", "target": "ant_insula", "type": "network_interaction", "weight": 0.6},
+      {"source": "sgACC", "target": "amygdala", "type": "emotional_regulation", "weight": 0.7},
+      {"source": "ant_insula", "target": "dACC", "type": "salience_network", "weight": 0.5},
+      {"source": "DLPFC", "target": "amygdala", "type": "top_down_control", "weight": 0.6},
+      {"source": "DLPFC", "target": "vlPFC", "type": "executive_network", "weight": 0.4},
+      {"source": "dACC", "target": "DLPFC", "type": "salience_to_cen", "weight": 0.5}
+    ],
+    "brain_to_behavior": [
+      {"source": "sgACC", "target": "amygdala", "type": "emotional_output", "weight": 0.7},
+      {"source": "DLPFC", "target": "NAc", "type": "reward_regulation", "weight": 0.5},
+      {"source": "ant_insula", "target": "amygdala", "type": "salience_emotion", "weight": 0.6},
+      {"source": "hippocampus", "target": "amygdala", "type": "context_emotion", "weight": 0.5},
+      {"source": "hypothalamus", "target": "hippocampus", "type": "hpa_hippocampus", "weight": 0.6}
+    ],
+    "feedback": [
+      {"source": "amygdala", "target": "sgACC", "type": "emotional_feedback", "weight": 0.5},
+      {"source": "NAc", "target": "DLPFC", "type": "reward_feedback", "weight": 0.3},
+      {"source": "hippocampus", "target": "hypothalamus", "type": "hpa_feedback", "weight": 0.4}
+    ]
+  },
+  "treatment_guide": {
+    "SSRI": {
+      "targets": ["amygdala_hypersensitivity", "hippocampus_atrophy", "dmn_overactivity"],
+      "mechanism": "세로토닌 재흡수 차단 → BDNF↑ → 신경가소성 회복 → 편도체↓, 해마↑, DMN↓",
+      "evidence_level": "★★★★★",
+      "notes": "2-4주 latancy, 60-70% 반응률"
+    },
+    "rTMS_DLPFC": {
+      "targets": ["pfc_dysregulation", "dmn_overactivity", "salience_network_dysfunction"],
+      "mechanism": "DLPFC 자극 → 전두엽-변연계 조절 회복 → DMN↔CEN 균형 개선",
+      "evidence_level": "★★★★☆",
+      "notes": "FDA 승인 (치료저항성 MDD), 20-30 sessions"
+    },
+    "DBS_sgACC": {
+      "targets": ["sgacc_hyperactivity"],
+      "mechanism": "sgACC 깊은뇌자극 → 병리적 어트랙터 상태 이탈 → DMN-SN 재설정",
+      "evidence_level": "★★★☆☆",
+      "notes": "치료저항성 우울증에 한함, 실험적 치료"
+    },
+    "Ketamine": {
+      "targets": ["dmn_overactivity", "reward_circuit_dysfunction", "sgacc_hyperactivity"],
+      "mechanism": "NMDA 길항 → Glutamate burst → 시냅스 가소성 급속 촉진 → DMN 연결성↓",
+      "evidence_level": "★★★★☆",
+      "notes": "급속 효과 (hours), 자살위기에 유용, 유지 치료 필요"
+    },
+    "CBT": {
+      "targets": ["pfc_dysregulation", "dmn_overactivity", "amygdala_hypersensitivity"],
+      "mechanism": "인지 재구성 → DLPFC 활성화 → 편도체 억제 → DMN↓",
+      "evidence_level": "★★★★☆",
+      "notes": "행동-뇌 연결 강화, 약물과 병행 시 효과 극대화"
+    },
+    "Exercise": {
+      "targets": ["hippocampus_atrophy", "reward_circuit_dysfunction", "hpa_axis_dysregulation"],
+      "mechanism": "BDNF↑, 보상 회로↑, 코르티솔↓, 염증↓",
+      "evidence_level": "★★★☆☆",
+      "notes": "자연적 BDNF 증가, 장기적 해마 보호 효과"
+    }
+  }
+}
