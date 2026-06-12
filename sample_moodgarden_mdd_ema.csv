@@ -1,0 +1,43 @@
+﻿id,schemaVersion,localDate,window,scheduledAt,submittedAt,timestamp,timezoneOffset,outOfWindow,mood,anhedonia,energy,hopelessness,rumination,sleepPoor,socialActivity,exercise,stressEvent,medicationTaken,ateMeal,alcohol,therapy,note
+2026-06-01_morning,2,2026-06-01,morning,2026-06-01T08:00:00Z,2026-06-01T08:15:00Z,2026-06-01T08:15:00Z,-540,false,41,34,37,38,61,false,false,false,false,false,true,false,false,
+2026-06-01_afternoon,2,2026-06-01,afternoon,2026-06-01T14:00:00Z,2026-06-01T14:22:00Z,2026-06-01T14:22:00Z,-540,false,44,39,45,45,63,false,false,false,false,false,true,false,false,
+2026-06-01_evening,2,2026-06-01,evening,2026-06-01T20:00:00Z,2026-06-01T20:29:00Z,2026-06-01T20:29:00Z,-540,false,44,38,34,36,60,false,false,false,false,false,true,false,false,
+2026-06-02_morning,2,2026-06-02,morning,2026-06-02T08:00:00Z,2026-06-02T08:15:00Z,2026-06-02T08:15:00Z,-540,false,30,31,25,38,69,true,false,false,false,false,false,false,false,
+2026-06-02_afternoon,2,2026-06-02,afternoon,2026-06-02T14:00:00Z,2026-06-02T14:22:00Z,2026-06-02T14:22:00Z,-540,false,42,41,39,45,65,true,false,false,false,false,true,false,false,
+2026-06-02_evening,2,2026-06-02,evening,2026-06-02T20:00:00Z,2026-06-02T20:29:00Z,2026-06-02T20:29:00Z,-540,false,37,34,35,40,67,true,false,false,false,false,true,false,false,
+2026-06-03_morning,2,2026-06-03,morning,2026-06-03T08:00:00Z,2026-06-03T08:15:00Z,2026-06-03T08:15:00Z,-540,false,30,31,32,36,72,false,false,false,true,false,true,false,false,
+2026-06-03_afternoon,2,2026-06-03,afternoon,2026-06-03T14:00:00Z,2026-06-03T14:22:00Z,2026-06-03T14:22:00Z,-540,false,34,33,39,37,72,false,false,false,true,false,true,false,false,
+2026-06-03_evening,2,2026-06-03,evening,2026-06-03T20:00:00Z,2026-06-03T20:29:00Z,2026-06-03T20:29:00Z,-540,false,29,28,29,35,73,false,false,false,true,false,true,false,false,스트레스 사건 이후 반추가 길어짐
+2026-06-04_morning,2,2026-06-04,morning,2026-06-04T08:00:00Z,2026-06-04T08:15:00Z,2026-06-04T08:15:00Z,-540,false,20,32,19,34,75,true,false,false,true,false,false,false,false,
+2026-06-04_afternoon,2,2026-06-04,afternoon,2026-06-04T14:00:00Z,2026-06-04T14:22:00Z,2026-06-04T14:22:00Z,-540,false,29,33,30,40,72,true,false,false,true,false,true,false,false,
+2026-06-04_evening,2,2026-06-04,evening,2026-06-04T20:00:00Z,2026-06-04T20:29:00Z,2026-06-04T20:29:00Z,-540,false,24,28,26,33,77,true,false,false,true,false,true,true,false,
+2026-06-05_morning,2,2026-06-05,morning,2026-06-05T08:00:00Z,2026-06-05T08:15:00Z,2026-06-05T08:15:00Z,-540,false,29,35,26,35,66,true,false,false,false,true,false,false,false,수면 질이 낮고 에너지가 낮음
+2026-06-05_afternoon,2,2026-06-05,afternoon,2026-06-05T14:00:00Z,2026-06-05T14:22:00Z,2026-06-05T14:22:00Z,-540,false,42,37,36,40,62,true,false,false,false,false,true,false,false,
+2026-06-05_evening,2,2026-06-05,evening,2026-06-05T20:00:00Z,2026-06-05T20:29:00Z,2026-06-05T20:29:00Z,-540,false,39,32,30,41,64,true,false,false,false,false,true,false,false,
+2026-06-06_morning,2,2026-06-06,morning,2026-06-06T08:00:00Z,2026-06-06T08:15:00Z,2026-06-06T08:15:00Z,-540,false,38,37,33,37,66,false,false,false,false,true,true,false,false,
+2026-06-06_afternoon,2,2026-06-06,afternoon,2026-06-06T14:00:00Z,2026-06-06T14:22:00Z,2026-06-06T14:22:00Z,-540,false,51,48,50,43,58,false,false,true,false,false,true,false,false,
+2026-06-06_evening,2,2026-06-06,evening,2026-06-06T20:00:00Z,2026-06-06T20:29:00Z,2026-06-06T20:29:00Z,-540,false,47,39,46,40,63,false,false,true,false,false,true,false,false,
+2026-06-07_morning,2,2026-06-07,morning,2026-06-07T08:00:00Z,2026-06-07T08:15:00Z,2026-06-07T08:15:00Z,-540,false,37,33,35,36,63,false,false,false,false,true,true,false,false,
+2026-06-07_afternoon,2,2026-06-07,afternoon,2026-06-07T14:00:00Z,2026-06-07T14:22:00Z,2026-06-07T14:22:00Z,-540,false,53,43,50,40,63,false,true,true,false,false,true,false,false,짧은 산책 후 기분이 약간 나아짐
+2026-06-07_evening,2,2026-06-07,evening,2026-06-07T20:00:00Z,2026-06-07T20:29:00Z,2026-06-07T20:29:00Z,-540,false,56,47,41,45,54,false,true,true,false,false,true,false,false,
+2026-06-08_morning,2,2026-06-08,morning,2026-06-08T08:00:00Z,2026-06-08T08:15:00Z,2026-06-08T08:15:00Z,-540,false,35,33,36,38,64,false,false,false,false,true,true,false,false,
+2026-06-08_afternoon,2,2026-06-08,afternoon,2026-06-08T14:00:00Z,2026-06-08T14:22:00Z,2026-06-08T14:22:00Z,-540,false,45,39,43,45,57,false,false,false,false,false,true,false,false,
+2026-06-08_evening,2,2026-06-08,evening,2026-06-08T20:00:00Z,2026-06-08T20:29:00Z,2026-06-08T20:29:00Z,-540,false,38,38,38,41,61,false,false,false,false,false,true,false,false,
+2026-06-09_morning,2,2026-06-09,morning,2026-06-09T08:00:00Z,2026-06-09T08:15:00Z,2026-06-09T08:15:00Z,-540,false,37,34,35,40,67,false,false,false,false,true,true,false,false,
+2026-06-09_afternoon,2,2026-06-09,afternoon,2026-06-09T14:00:00Z,2026-06-09T14:22:00Z,2026-06-09T14:22:00Z,-540,false,54,48,49,41,61,false,true,true,false,false,true,false,false,
+2026-06-09_evening,2,2026-06-09,evening,2026-06-09T20:00:00Z,2026-06-09T20:29:00Z,2026-06-09T20:29:00Z,-540,false,53,52,44,43,55,false,true,true,false,false,true,false,false,사회활동 후 반추가 줄어듦
+2026-06-10_morning,2,2026-06-10,morning,2026-06-10T08:00:00Z,2026-06-10T08:15:00Z,2026-06-10T08:15:00Z,-540,false,19,32,19,35,78,true,false,false,true,true,false,false,false,
+2026-06-10_afternoon,2,2026-06-10,afternoon,2026-06-10T14:00:00Z,2026-06-10T14:22:00Z,2026-06-10T14:22:00Z,-540,false,31,35,33,41,72,true,false,false,true,false,true,false,false,
+2026-06-10_evening,2,2026-06-10,evening,2026-06-10T20:00:00Z,2026-06-10T20:29:00Z,2026-06-10T20:29:00Z,-540,false,29,32,31,37,74,true,false,false,true,false,true,false,false,
+2026-06-11_morning,2,2026-06-11,morning,2026-06-11T08:00:00Z,2026-06-11T08:15:00Z,2026-06-11T08:15:00Z,-540,false,31,36,29,45,62,true,false,false,false,true,false,false,false,잠을 설쳐서 아침 기분이 낮음
+2026-06-11_afternoon,2,2026-06-11,afternoon,2026-06-11T14:00:00Z,2026-06-11T14:22:00Z,2026-06-11T14:22:00Z,-540,false,47,43,40,47,57,true,false,false,false,false,true,false,false,
+2026-06-11_evening,2,2026-06-11,evening,2026-06-11T20:00:00Z,2026-06-11T20:29:00Z,2026-06-11T20:29:00Z,-540,false,39,39,38,42,59,true,false,false,false,false,true,true,false,
+2026-06-12_morning,2,2026-06-12,morning,2026-06-12T08:00:00Z,2026-06-12T08:15:00Z,2026-06-12T08:15:00Z,-540,false,34,35,38,40,66,false,false,false,true,true,true,false,false,
+2026-06-12_afternoon,2,2026-06-12,afternoon,2026-06-12T14:00:00Z,2026-06-12T14:22:00Z,2026-06-12T14:22:00Z,-540,false,50,34,42,48,57,false,false,false,true,false,true,false,true,
+2026-06-12_evening,2,2026-06-12,evening,2026-06-12T20:00:00Z,2026-06-12T20:29:00Z,2026-06-12T20:29:00Z,-540,false,42,36,40,46,63,false,false,false,true,false,true,false,false,
+2026-06-13_morning,2,2026-06-13,morning,2026-06-13T08:00:00Z,2026-06-13T08:15:00Z,2026-06-13T08:15:00Z,-540,false,38,36,31,48,62,true,false,false,false,true,false,false,false,
+2026-06-13_afternoon,2,2026-06-13,afternoon,2026-06-13T14:00:00Z,2026-06-13T14:22:00Z,2026-06-13T14:22:00Z,-540,false,54,47,54,53,54,true,false,true,false,false,true,false,false,상담 후 절망감이 조금 낮아짐
+2026-06-13_evening,2,2026-06-13,evening,2026-06-13T20:00:00Z,2026-06-13T20:29:00Z,2026-06-13T20:29:00Z,-540,false,53,44,49,50,56,true,false,true,false,false,true,false,false,
+2026-06-14_morning,2,2026-06-14,morning,2026-06-14T08:00:00Z,2026-06-14T08:15:00Z,2026-06-14T08:15:00Z,-540,false,49,39,43,51,56,false,false,false,false,true,true,false,false,
+2026-06-14_afternoon,2,2026-06-14,afternoon,2026-06-14T14:00:00Z,2026-06-14T14:22:00Z,2026-06-14T14:22:00Z,-540,false,62,49,62,53,47,false,true,true,false,false,true,false,false,
+2026-06-14_evening,2,2026-06-14,evening,2026-06-14T20:00:00Z,2026-06-14T20:29:00Z,2026-06-14T20:29:00Z,-540,false,65,52,54,49,44,false,true,true,false,false,true,false,false,

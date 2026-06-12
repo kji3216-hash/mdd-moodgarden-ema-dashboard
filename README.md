@@ -10,8 +10,13 @@ Public deployments use CSV upload for MoodGarden EMA data.
 - Requirements file: `requirements.txt`
 - Required data file: `mdd_triangle_circuit_map.json`
 - Optional helper module: `ema_integration.py`
+- Example EMA CSV: `sample_moodgarden_mdd_ema.csv`
 
 The local MoodGarden live-file bridge is hidden by default in public mode.
+
+To preview the EMA dashboard without personal data, download
+`sample_moodgarden_mdd_ema.csv` from this repository and upload it in the
+app sidebar.
 
 ## Local Live Sync
 
